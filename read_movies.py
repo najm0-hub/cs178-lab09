@@ -71,7 +71,7 @@ def get_movie_by_title(table):
     else:
         print("Movie not found.")
 
-get_movie_by_title(table)
+
 
 def print_movie(movie):
     print("Title:", movie.get("Title"))
