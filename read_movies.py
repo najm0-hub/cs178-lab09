@@ -51,6 +51,24 @@ def print_all_movies():
     for movie in items:
         print_movie(movie)
 
+def get_movie_by_title(table):
+    title = input("Enter movie title: ")
+
+    response = table.scan(
+        FilterExpression=Attr("Title").eq(title)
+    )
+
+    items = response.get("Items")
+
+    if items:
+        print("Movie found:")
+        for movie in items:
+            print_movie(movie)
+    else:
+        print("Movie not found.")
+
+get_movie_by_title(table)
+
 def print_movie(movie):
     print("Title:", movie.get("Title"))
     print("Year:", movie.get("Year"))
