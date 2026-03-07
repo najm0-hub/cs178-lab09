@@ -51,6 +51,14 @@ def print_all_movies():
     for movie in items:
         print_movie(movie)
 
+def print_movie(movie):
+    print("Title:", movie.get("Title"))
+    print("Year:", movie.get("Year"))
+    
+    # New attribute
+    print("Genre:", movie.get("Genre", "N/A"))
+    
+    
 
 def main():
     print("===== Reading from DynamoDB =====\n")
@@ -59,3 +67,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
