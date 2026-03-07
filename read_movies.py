@@ -56,10 +56,13 @@ def get_movie_by_title(table):
     title = input("Enter movie title: ")
 
     response = table.scan(
-        FilterExpression=Attr("Title").eq(title)
+        FilterExpression="Title = :t",
+        ExpressionAttributeValues={
+            ":t": title
+        }
     )
 
-    items = response.get("Items")
+    items = response.get("Items", [])
 
     if items:
         print("Movie found:")
