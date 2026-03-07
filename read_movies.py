@@ -4,6 +4,7 @@
 
 import boto3
 from boto3.dynamodb.conditions import Key
+import Attr
 
 # -------------------------------------------------------
 # Configuration — update REGION if your table is elsewhere
