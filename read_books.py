@@ -3,7 +3,6 @@
 
 import boto3
 import boto3.dynamodb.conditions
-import key
 
 # -------------------------------------------------------
 # Configuration
