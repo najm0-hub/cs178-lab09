@@ -20,8 +20,8 @@ def print_book(book):
     """Print a book in a readable format."""
     print("Title:", book.get("Title", "Unknown"))
     print("Author:", book.get("Author", "Unknown"))
-    print("Genre:", book.get("Genre", "Unknown"))
-    print("---------------------------")
+    print("Year:", book.get("Genre", "Unknown"))
+   
 
 
 def print_all_books():
